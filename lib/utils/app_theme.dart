@@ -9,14 +9,15 @@ ThemeData buildThemeData(BuildContext context) {
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     appBarTheme: AppBarTheme(
+      centerTitle: true,
       backgroundColor: Colorz.screenBackground,
       elevation: 0.0,
       iconTheme: const IconThemeData(
-        color: Colorz.main,
+        color: Colorz.textSelection,
       ),
       titleSpacing: double.minPositive,
       titleTextStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
-            color: Colorz.textPrimary,
+            color: Colorz.textSelection,
             fontWeight: FontWeight.w600,
           ),
     ),
