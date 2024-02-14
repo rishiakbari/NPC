@@ -19,5 +19,6 @@ class Colorz {
   static const buttonGradiantOne = Color(0xFF5EDEFF);
   static const buttonGradiantTwo = Color(0xFF58BFFC);
 
+  static const textFormFieldBackground = Color(0xFFF4F5F7);
 
 }
