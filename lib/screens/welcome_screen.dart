@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           flex: 2,
           child: Container(
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colorz.main,
             ),
             child: Column(
@@ -72,7 +72,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           color: Colorz.simpleText,
                           fontWeight: FontWeight.w600),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 Text(
@@ -83,7 +83,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       .bodySmall!
                       .copyWith(color: Colorz.simpleText, fontSize: 16),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25.0,
                 ),
                 RoundedButtonWidget(
@@ -96,12 +96,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       Navigator.pushReplacementNamed(context, '/welcome-login-screen');
                     }
                     _pageController.nextPage(
-                      duration: Duration(microseconds: 300), 
+                      duration: const Duration(microseconds: 300), 
                       curve: Curves.bounceIn,
                     );
                  },
                 ),
-                SizedBox(height: 50.0,),
+                const SizedBox(height: 50.0,),
                 SizedBox(
                   height: 10.0,
                   child: ListView.builder(
@@ -113,7 +113,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            margin: EdgeInsets.symmetric(horizontal: 5.0),
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
                             height: 10,
                             width: 10,
                             decoration: BoxDecoration(

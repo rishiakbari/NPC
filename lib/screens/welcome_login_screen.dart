@@ -40,7 +40,7 @@ class _WelcomeLoginScreenState extends State<WelcomeLoginScreen> {
                     textColor: Colorz.simpleText, 
                     isGradient: true,
                     onPressed: () {
-                      
+                      Navigator.pushNamed(context, '/welcome-v2-login-screen');
                     },
                   ),
                   const SizedBox(height: 30.0,),
