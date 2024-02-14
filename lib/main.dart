@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/splash_screen.dart';
 import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
+import 'package:npc/screens/welcome_v2_login_screen.dart';
 
 import 'utils/app_theme.dart';
 
@@ -29,6 +31,8 @@ class MyApp extends StatelessWidget {
         SplashScreen.routeName :(context) =>  const SplashScreen(),
         WelcomeScreen.routeName :(context) =>  const WelcomeScreen(),
         WelcomeLoginScreen.routeName :(context) =>  const WelcomeLoginScreen(),
+        WelcomeV2LoginScreen.routeName :(context) =>  const WelcomeV2LoginScreen(),
+        SignInScreen.routeName :(context) =>  const SignInScreen(),
       }, 
     );
   }
