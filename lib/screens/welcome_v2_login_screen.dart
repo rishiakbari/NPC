@@ -63,7 +63,7 @@ class _WelcomeV2LoginScreenState extends State<WelcomeV2LoginScreen> {
                       textColor: Colorz.simpleText,
                       isGradient: true,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/sign-in-screen');
+                        Navigator.pushNamed(context, '/sign-up-screen');
                       },
                     ),
                     const SizedBox(height: 20.0),

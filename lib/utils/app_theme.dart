@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:npc/utils/colorz.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:npc/utils/colorz.dart';
 
 ThemeData buildThemeData(BuildContext context) {
   return ThemeData(
@@ -41,7 +41,7 @@ ThemeData buildThemeData(BuildContext context) {
       ),
     ),
     textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: Colorz.main,
+      cursorColor: Colorz.textSelection,
       selectionColor: Colorz.textSelection,
       selectionHandleColor: Colorz.main,
     ),
@@ -69,6 +69,19 @@ ThemeData buildThemeData(BuildContext context) {
         ),
       ),
     ),
-    textTheme: GoogleFonts.interTextTheme().copyWith(),
+    textTheme: GoogleFonts.robotoTextTheme().copyWith(
+      bodyMedium: GoogleFonts.roboto(),
+      bodyLarge: GoogleFonts.roboto(),
+      bodySmall: GoogleFonts.roboto(),
+      headlineLarge: GoogleFonts.roboto(),
+      headlineMedium: GoogleFonts.roboto(),
+      headlineSmall: GoogleFonts.roboto(),
+      titleLarge: GoogleFonts.roboto(),
+      titleMedium: GoogleFonts.roboto(),
+      titleSmall: GoogleFonts.roboto(),
+      displayLarge: GoogleFonts.roboto(),
+      displayMedium: GoogleFonts.roboto(),
+      displaySmall: GoogleFonts.roboto(),
+    ),
   );
 }

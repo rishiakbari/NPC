@@ -16,6 +16,13 @@ class Colorz {
   static const redText = Color(0xFFFE2121);
   static const simpleText = Color(0xFFFFFFFF);
 
+  static const dialogBackgroundGradientOne = Color(0xFF262626);
+  static const dialogBackgroundGradientTwo = Color(0xFF0D0D0D);
+  static const dialogBorder = Color(0x1AA4A4A4);
+
+  static const circleBackgroundGradiantOne = Color(0xFFA7E05F);
+  static const circleBackgroundGradiantTwox = Color(0xFF12AB97);
+
   static const buttonGradiantOne = Color(0xFF5EDEFF);
   static const buttonGradiantTwo = Color(0xFF58BFFC);
 

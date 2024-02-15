@@ -131,12 +131,15 @@ class _SignInScreenState extends State<SignInScreen> {
                                   const SizedBox(
                                     width: 25.0,
                                   ),
-                                  Text(
-                                    "Forget password ?",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleSmall!
-                                        .copyWith(color: Colorz.main),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Text(
+                                      "Forget password ?",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleSmall!
+                                          .copyWith(color: Colorz.main),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -146,9 +149,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               RoundedButtonWidget(
                                 text: "Sign In",
                                 textColor: Colorz.simpleText,
-                                onPressed: () {
-                                  
-                                },
+                                onPressed: () {},
                               ),
                             ],
                           ),
@@ -172,14 +173,19 @@ class _SignInScreenState extends State<SignInScreen> {
                           const SizedBox(
                             width: 5.0,
                           ),
-                          Text(
-                            "Sign up !",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleSmall!
-                                .copyWith(
-                                    color: Colorz.main,
-                                    fontWeight: FontWeight.w600),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/sign-up-screen');
+                            },
+                            child: Text(
+                              "Sign up !",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall!
+                                  .copyWith(
+                                      color: Colorz.main,
+                                      fontWeight: FontWeight.w600),
+                            ),
                           )
                         ],
                       ),

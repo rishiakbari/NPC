@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/login_with_phone_number_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
+import 'package:npc/screens/sign_up_screen.dart';
 import 'package:npc/screens/splash_screen.dart';
 import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
         WelcomeLoginScreen.routeName :(context) =>  const WelcomeLoginScreen(),
         WelcomeV2LoginScreen.routeName :(context) =>  const WelcomeV2LoginScreen(),
         SignInScreen.routeName :(context) =>  const SignInScreen(),
+        SignUpScreen.routeName :(context) =>  const SignUpScreen(),
+        LoginWithPhoneNumberScreen.routeName :(context) =>  const LoginWithPhoneNumberScreen(),
       }, 
     );
   }
