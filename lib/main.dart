@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
+import 'package:npc/screens/otp_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/sign_up_screen.dart';
 import 'package:npc/screens/splash_screen.dart';
@@ -8,6 +10,7 @@ import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:npc/screens/welcome_v2_login_screen.dart';
 
+import 'screens/select_location_screen.dart';
 import 'utils/app_theme.dart';
 
 void main() {
@@ -37,6 +40,9 @@ class MyApp extends StatelessWidget {
         SignInScreen.routeName :(context) =>  const SignInScreen(),
         SignUpScreen.routeName :(context) =>  const SignUpScreen(),
         LoginWithPhoneNumberScreen.routeName :(context) =>  const LoginWithPhoneNumberScreen(),
+        SelectLocationScreen.routeName :(context) =>  const SelectLocationScreen(),
+        OtpScreen.routeName :(context) =>  const OtpScreen(),
+        ForgetPasswordEmailSentScreen.routeName :(context) =>  const ForgetPasswordEmailSentScreen(),
       }, 
     );
   }

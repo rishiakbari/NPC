@@ -47,7 +47,8 @@ class _WelcomeLoginScreenState extends State<WelcomeLoginScreen> {
                   RoundedButtonWidget(
                     text: "Continue with Phone Number",
                     textColor: Colorz.simpleText,
-                    isGradient: true,
+                    backgroundColor: Colorz.transparentBackground,
+                    // isGradient: true,
                     onPressed: () {
                       
                     },

@@ -17,9 +17,11 @@ class CustomCountryCodePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size displaySize = MediaQuery.of(context).size;
     return CountryCodePicker(
-      flagWidth: displaySize.width * 0.05,
+      flagDecoration : const ShapeDecoration(
+        shape: CircleBorder()),
       showFlag: true,
-      showDropDownButton: true,
+      // hideMainText: true,
+      showDropDownButton: false,
       barrierColor: Colorz.screenBackground,
       dialogSize: Size(displaySize.width * 0.8, displaySize.height * 0.7),
       boxDecoration: BoxDecoration(

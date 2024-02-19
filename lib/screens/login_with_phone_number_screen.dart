@@ -24,7 +24,7 @@ class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: "Sign in",
       ),
       body: CustomSingleChildScrollView(
@@ -63,6 +63,17 @@ class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen>
                       const SizedBox(height: 20.0,),
                       CustomTextFormField(
                       controller: phoneController,
+                       suffixIcon: ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (bounds) => const RadialGradient(
+                          center: Alignment.topCenter,
+                          colors: [
+                            Colorz.circleBackgroundGradiantOne,
+                            Colorz.circleBackgroundGradiantTwo,
+                          ]
+                        ).createShader(bounds),
+                        child: const Icon(Icons.check_circle),
+                      ),
                       hintText: "1234567892",
                       prefixIcon: FittedBox(
                         child: CustomCountryCodePicker(
@@ -82,7 +93,7 @@ class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen>
                       text: "Sign in",
                       textColor: Colorz.simpleText,
                       onPressed: () {
-                        
+                        Navigator.pushNamed(context, '/otp-screen');
                       },
                       ),
                     ],

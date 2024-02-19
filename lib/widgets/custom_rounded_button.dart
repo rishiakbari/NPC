@@ -51,7 +51,7 @@ class RoundedButtonWidget extends StatelessWidget {
       ),
       child: MaterialButton(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         padding: padding ??
             const EdgeInsets.symmetric(
               vertical: 12.0,

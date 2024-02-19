@@ -107,9 +107,6 @@ class _SignInScreenState extends State<SignInScreen> {
                                           ),
                                         )),
                                   )),
-                              const SizedBox(
-                                height: 10.0,
-                              ),
                               Row(
                                 children: [
                                   Checkbox(
@@ -129,16 +126,18 @@ class _SignInScreenState extends State<SignInScreen> {
                                         .copyWith(color: Colorz.textSelection),
                                   ),
                                   const SizedBox(
-                                    width: 25.0,
+                                    width: 30.0,
                                   ),
                                   InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.pushNamed(context, '/forget-password-email-sent-screen');
+                                    },
                                     child: Text(
                                       "Forget password ?",
                                       style: Theme.of(context)
                                           .textTheme
                                           .titleSmall!
-                                          .copyWith(color: Colorz.main),
+                                          .copyWith(color: Colorz.main,fontWeight: FontWeight.w600),
                                     ),
                                   ),
                                 ],
@@ -149,7 +148,9 @@ class _SignInScreenState extends State<SignInScreen> {
                               RoundedButtonWidget(
                                 text: "Sign In",
                                 textColor: Colorz.simpleText,
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(context,  '/select-location-screen');
+                                },
                               ),
                             ],
                           ),

@@ -70,7 +70,7 @@ class _WelcomeV2LoginScreenState extends State<WelcomeV2LoginScreen> {
                     RoundedButtonWidget(
                       text: "Register",
                       textColor: Colorz.simpleText,
-                      isGradient: true,
+                      backgroundColor: Colorz.transparentBackground,
                       onPressed: () {},
                     ),
                   ],

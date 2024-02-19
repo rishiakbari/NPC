@@ -22,6 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   late String _countryCode;
+  bool isChecked = false;
 
    Future<void> _init() async {
     _countryCode = '+91';
@@ -117,11 +118,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: phoneController,
                       hintText: "1234567892",
+                      suffixIcon: ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (bounds) => const RadialGradient(
+                          center: Alignment.topCenter,
+                          colors: [
+                            Colorz.circleBackgroundGradiantOne,
+                            Colorz.circleBackgroundGradiantTwo,
+                          ]
+                        ).createShader(bounds),
+                        child: const Icon(Icons.check_circle),
+                      ),
                       prefixIcon: FittedBox(
                         child: CustomCountryCodePicker(
                           initialSelection: 'IN',
                           onChanged: (value) {
                             _countryCode = value.dialCode!;
+
                           },
                         ),
                       ),
