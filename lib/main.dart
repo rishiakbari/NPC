@@ -10,7 +10,10 @@ import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:npc/screens/welcome_v2_login_screen.dart';
 
+import 'screens/change_password_screen.dart';
+import 'screens/forget_password_email_code.dart';
 import 'screens/select_location_screen.dart';
+import 'screens/sign_up_user_screen.dart';
 import 'utils/app_theme.dart';
 
 void main() {
@@ -43,6 +46,10 @@ class MyApp extends StatelessWidget {
         SelectLocationScreen.routeName :(context) =>  const SelectLocationScreen(),
         OtpScreen.routeName :(context) =>  const OtpScreen(),
         ForgetPasswordEmailSentScreen.routeName :(context) =>  const ForgetPasswordEmailSentScreen(),
+        ForgetPasswordEmailCodeScreen.routeName :(context) =>  const ForgetPasswordEmailCodeScreen(),
+        ChangePasswordScreen.routeName :(context) =>  const ChangePasswordScreen(),        
+        SignUpUserScreen.routeName :(context) =>  const SignUpUserScreen(),        
+
       }, 
     );
   }
