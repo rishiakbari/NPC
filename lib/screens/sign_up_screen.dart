@@ -117,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     CustomTextFormField(
                       controller: phoneController,
-                      hintText: "1234567892",
+                      hintText: "Phone Number",
                       suffixIcon: ShaderMask(
                         blendMode: BlendMode.srcIn,
                         shaderCallback: (bounds) => const RadialGradient(

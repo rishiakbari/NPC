@@ -16,6 +16,8 @@ class Colorz {
   static const textSelection = Color(0xFF001038);
   static const redText = Color(0xFFFE2121);
   static const simpleText = Color(0xFFFFFFFF);
+  static const circleavtarBackground = Color(0xFFD6D6D6);
+  static const cameraBackground = Color(0xFF8A8D9F);
 
   static const dialogBackgroundGradientOne = Color(0xFF262626);
   static const dialogBackgroundGradientTwo = Color(0xFF0D0D0D);

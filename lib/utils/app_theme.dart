@@ -16,7 +16,7 @@ ThemeData buildThemeData(BuildContext context) {
         color: Colorz.textSelection,
       ),
       titleSpacing: double.minPositive,
-      titleTextStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
+      titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
             color: Colorz.textSelection,
             fontWeight: FontWeight.w600,
           ),

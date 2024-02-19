@@ -55,7 +55,7 @@ class CustomTextFormField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Colorz.textSelection,
+                color: Colorz.textSecondary,
               fontSize: 14
               ),
           labelText: labelText,
