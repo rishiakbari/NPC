@@ -16,6 +16,8 @@ class ForgetPasswordEmailSentScreen extends StatefulWidget {
 }
 
 class _ForgetPasswordEmailSentScreenState extends State<ForgetPasswordEmailSentScreen> {
+
+  final TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +49,7 @@ class _ForgetPasswordEmailSentScreenState extends State<ForgetPasswordEmailSentS
                       ),
                       const SizedBox(height: 10.0,),
                       CustomTextFormField(
+                        controller: emailController,
                         hintText: "Email Address",
                         onTap: () {},
                       ),
@@ -62,7 +65,9 @@ class _ForgetPasswordEmailSentScreenState extends State<ForgetPasswordEmailSentS
                       RoundedButtonWidget(
                         text: "Send",
                         textColor: Colorz.simpleText,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context,  '/forget-password-email-code-screen');
+                        },
                       )
                     ],
                   ),
