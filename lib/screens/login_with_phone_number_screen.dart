@@ -74,7 +74,7 @@ class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen>
                         ).createShader(bounds),
                         child: const Icon(Icons.check_circle),
                       ),
-                      hintText: "1234567892",
+                      hintText: "Phone Number",
                       prefixIcon: FittedBox(
                         child: CustomCountryCodePicker(
                           initialSelection: 'IN',
