@@ -10,6 +10,7 @@ class Colorz {
 
   static const titleText = Color(0xFF001038);
   static const headerText = Color(0xFFFFFFFF);
+  static const otpField = Color(0xFFF4F5F7);
   static const textSecondary = Color(0xFF868A9A);
   static const textPrimary = Color(0xFF1C6AFE);
   static const textSelection = Color(0xFF001038);
@@ -21,10 +22,12 @@ class Colorz {
   static const dialogBorder = Color(0x1AA4A4A4);
 
   static const circleBackgroundGradiantOne = Color(0xFFA7E05F);
-  static const circleBackgroundGradiantTwox = Color(0xFF12AB97);
+  static const circleBackgroundGradiantTwo = Color(0xFF12AB97);
 
   static const buttonGradiantOne = Color(0xFF5EDEFF);
   static const buttonGradiantTwo = Color(0xFF58BFFC);
+
+  static const transparentBackground = Color(0xF54C1FB);
 
   static const textFormFieldBackground = Color(0xFFF4F5F7);
 
