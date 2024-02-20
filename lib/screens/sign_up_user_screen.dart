@@ -100,7 +100,9 @@ class _SignUpUserScreenState extends State<SignUpUserScreen> {
                       RoundedButtonWidget(
                         text: "Sign up",
                         textColor: Colorz.simpleText,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/success-screen');
+                        },
                       ),
                       const SizedBox(height: 30.0,),
                       Row(

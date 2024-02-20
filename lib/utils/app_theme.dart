@@ -8,6 +8,7 @@ ThemeData buildThemeData(BuildContext context) {
     scaffoldBackgroundColor: Colorz.screenBackground,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
+    brightness: Brightness.light,
     appBarTheme: AppBarTheme(
       centerTitle: true,
       backgroundColor: Colorz.screenBackground,
@@ -69,19 +70,7 @@ ThemeData buildThemeData(BuildContext context) {
         ),
       ),
     ),
-    textTheme: GoogleFonts.robotoTextTheme().copyWith(
-      bodyMedium: GoogleFonts.roboto(),
-      bodyLarge: GoogleFonts.roboto(),
-      bodySmall: GoogleFonts.roboto(),
-      headlineLarge: GoogleFonts.roboto(),
-      headlineMedium: GoogleFonts.roboto(),
-      headlineSmall: GoogleFonts.roboto(),
-      titleLarge: GoogleFonts.roboto(),
-      titleMedium: GoogleFonts.roboto(),
-      titleSmall: GoogleFonts.roboto(),
-      displayLarge: GoogleFonts.roboto(),
-      displayMedium: GoogleFonts.roboto(),
-      displaySmall: GoogleFonts.roboto(),
-    ),
+    textTheme: GoogleFonts.robotoTextTheme().copyWith(),
   );
 }
+
