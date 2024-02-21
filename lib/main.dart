@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         ChangePasswordScreen.routeName :(context) =>  const ChangePasswordScreen(),        
         SignUpUserScreen.routeName :(context) =>  const SignUpUserScreen(),      
         SuccessScreen.routeName :(context) =>  const SuccessScreen(),      
+        BottomNavigationBarScreen.routeName :(context) =>  const BottomNavigationBarScreen(),      
 
       }, 
     );
