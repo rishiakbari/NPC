@@ -67,7 +67,9 @@ class _SuccessScreenState extends State<SuccessScreen> {
                         RoundedButtonWidget(
                           text: "Take me to sign in",
                           textColor: Colorz.simpleText,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/bottom-navigation-bar-screen');
+                          },
                         )
                       ],
                     ),
