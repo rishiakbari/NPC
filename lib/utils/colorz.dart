@@ -18,6 +18,7 @@ class Colorz {
   static const simpleText = Color(0xFFFFFFFF);
   static const circleavtarBackground = Color(0xFFD6D6D6);
   static const cameraBackground = Color(0xFF8A8D9F);
+  static const textBlack = Color(0xFF000000);
 
   static const dialogBackgroundGradientOne = Color(0xFF262626);
   static const dialogBackgroundGradientTwo = Color(0xFF0D0D0D);
@@ -31,6 +32,11 @@ class Colorz {
 
   static const transparentBackground = Color(0xF54C1FB);
 
+  static const circleBackground = Color(0xFF25CFCD);
+
   static const textFormFieldBackground = Color(0xFFF4F5F7);
+
+  static const dry = Color(0xFF6C4DDA);
+  static const iron = Color(0xFFFD8590);
 
 }
