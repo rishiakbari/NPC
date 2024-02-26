@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -46,6 +48,7 @@ class _OtpScreenState extends State<OtpScreen> {
       border: Border.all(color: Colors.transparent)
     )
   );
+  final TextEditingController pinput = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,6 +91,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         margin: const EdgeInsets.only(top: 20),
                         width: double.infinity,
                         child: Pinput(
+                          controller: pinput,
                           length: 4,
                           defaultPinTheme: defaultPinTheme,
                           focusedPinTheme: defaultPinTheme.copyWith(
@@ -131,7 +135,18 @@ class _OtpScreenState extends State<OtpScreen> {
                       RoundedButtonWidget(
                         text: "Verify Now",
                         textColor: Colorz.simpleText,
-                        onPressed: () {},
+                        onPressed: () {
+                          if(pinput.text.isEmpty){
+                            setState(() {
+                              Fluttertoast.showToast(
+                                msg: "Please enter your PIN",
+                              );
+                            });
+                          }
+                          else{
+                            Navigator.pushReplacementNamed(context, BottomNavigationBarScreen.routeName);
+                          }
+                        },
                       )
                     ],
                   ),

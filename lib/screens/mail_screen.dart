@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/colorz.dart';
+
 class MailScreen extends StatefulWidget {
   const MailScreen({super.key});
 
@@ -10,6 +12,8 @@ class MailScreen extends StatefulWidget {
 class _MailScreenState extends State<MailScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colorz.screenBackground,
+    );
   }
 }

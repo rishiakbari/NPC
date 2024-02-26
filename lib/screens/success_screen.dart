@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
 
@@ -68,7 +69,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
                           text: "Take me to sign in",
                           textColor: Colorz.simpleText,
                           onPressed: () {
-                            Navigator.pushNamed(context, '/bottom-navigation-bar-screen');
+                            Navigator.pushNamed(context, BottomNavigationBarScreen.routeName);
                           },
                         )
                       ],

@@ -23,7 +23,7 @@ class _PlusScreenState extends State<PlusScreen> {
 
   final List cleaningName = [
     "Office Clean",
-    "HomeCclean",
+    "Home Clean",
     "Iron Laundry",
     "Dry Cleaning",
     "Shoes Clean",
@@ -40,6 +40,7 @@ class _PlusScreenState extends State<PlusScreen> {
 
   ];
   PageController controller = PageController();
+  bool isexpanded = false;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -209,12 +210,16 @@ class _PlusScreenState extends State<PlusScreen> {
                             .bodyMedium!
                             .copyWith(color: Colorz.textSelection,fontWeight: FontWeight.w600),
                           ),
-                          Text(
-                            "View All",
-                            style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium!
-                            .copyWith(color: Colorz.textSecondary),
+                          InkWell(
+                            onTap: () {
+                            },
+                            child: Text(
+                              "View All",
+                              style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(color: Colorz.textSecondary),
+                            ),
                           )
                         ],
                       ),

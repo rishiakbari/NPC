@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:npc/screens/sign_up_user_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -107,11 +108,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           if(oldPassword.text.isEmpty || password.text.isEmpty || confirmPassword.text.isEmpty){
                             Fluttertoast.showToast(
                               msg: "Please enter your password",
-                              gravity: ToastGravity.CENTER
                             );
                           }
                           else{
-                            Navigator.pushNamed(context, '/sign-up-user-screen');
+                            Navigator.pushNamed(context, SignUpUserScreen.routeName);
                           }
                         },
                       )

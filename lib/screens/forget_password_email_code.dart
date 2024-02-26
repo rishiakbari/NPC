@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:npc/screens/change_password_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
 import 'package:pinput/pinput.dart';
@@ -105,12 +106,11 @@ class _ForgetPasswordEmailCodeScreenState extends State<ForgetPasswordEmailCodeS
                             setState(() {
                               Fluttertoast.showToast(
                                 msg: "Please enter your code",
-                                gravity: ToastGravity.CENTER,
                               );
                             });
                            }
                            else{
-                             Navigator.pushNamed(context, '/change-password-screen');
+                             Navigator.pushNamed(context, ChangePasswordScreen.routeName);
                            }
                           },
                         )

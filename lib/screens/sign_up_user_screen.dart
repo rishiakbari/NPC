@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:npc/screens/success_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -113,17 +114,15 @@ class _SignUpUserScreenState extends State<SignUpUserScreen> {
                             ){
                               Fluttertoast.showToast(
                                 msg: "Please enter your required fields",
-                                gravity: ToastGravity.CENTER
                               );
                           }
                           else if (!_checkbox){
                             Fluttertoast.showToast(
                               msg: "Please check the Privacy Policy",
-                              gravity: ToastGravity.CENTER
                             );
                           }
                           else{
-                            Navigator.pushNamed(context, '/success-screen');
+                            Navigator.pushNamed(context, SuccessScreen.routeName);
                           }
                         },
                       ),

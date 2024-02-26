@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/colorz.dart';
+
 class SubtitalScreen extends StatefulWidget {
   const SubtitalScreen({super.key});
 
@@ -10,6 +12,8 @@ class SubtitalScreen extends StatefulWidget {
 class _SubtitalScreenState extends State<SubtitalScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colorz.screenBackground,
+    );
   }
 }
