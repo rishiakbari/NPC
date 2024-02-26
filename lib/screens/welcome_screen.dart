@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:npc/models/onboard.dart';
+import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/colorz.dart';
 
@@ -16,12 +18,17 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  late SharedPreferences _sharedPreferences;
   int currentIndex = 0;
   late PageController _pageController;
   @override
   void initState() {
+    _init();
     _pageController = PageController(initialPage: 0);
     super.initState();
+  }
+  Future<void> _init()async{
+    _sharedPreferences = await SharedPreferences.getInstance();
   }
   @override
   void dispose() {
@@ -91,9 +98,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                  textColor: Colorz.simpleText,
                  isGradient: true,
                  onPressed: () {
+
                    currentIndex = index;
                     if(index == screens.length - 1){
-                      Navigator.pushReplacementNamed(context, '/welcome-login-screen');
+                      Navigator.pushReplacementNamed(context, WelcomeLoginScreen.routeName);
                     }
                     _pageController.nextPage(
                       duration: const Duration(microseconds: 300), 

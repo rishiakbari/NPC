@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/colorz.dart';
 import '../widgets/custom_country_code_picker.dart';
@@ -20,7 +22,17 @@ class LoginWithPhoneNumberScreen extends StatefulWidget {
 class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen> {
   
   final TextEditingController phoneController =  TextEditingController();
+  late SharedPreferences _sharedPreferences;
   late String _countryCode;
+
+  Future<void> _init()async{
+    _sharedPreferences = await SharedPreferences.getInstance();
+  }
+  @override
+  void initState() {
+    _init();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +105,18 @@ class _LoginWithPhoneNumberScreenState extends State<LoginWithPhoneNumberScreen>
                       text: "Sign in",
                       textColor: Colorz.simpleText,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/otp-screen');
+                        if(phoneController.text.isEmpty){
+                          setState(() {
+                            Fluttertoast.showToast(
+                              msg: "Please enter a phone number",
+                            );
+                          });
+                        }
+                        else{
+                          Navigator.pushNamed(context, '/otp-screen');
+                          _sharedPreferences.setString('authToken', 'true');
+
+                        }
                       },
                       ),
                     ],

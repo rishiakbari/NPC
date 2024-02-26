@@ -1,6 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
+import 'package:npc/screens/welcome_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/colorz.dart';
 
@@ -14,13 +17,31 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  late SharedPreferences _sharedPreferences;
 
+  Future<void> _init()async{
+    
+    _sharedPreferences = await SharedPreferences.getInstance();
+    var token = _sharedPreferences.getString('authToken');
+    if(token == null ){
+     if(mounted){
+       Navigator.pushReplacementNamed(context, WelcomeScreen.routeName);
+     }
+    }
+    else{
+      if(mounted){
+        Navigator.pushReplacementNamed(context, BottomNavigationBarScreen.routeName);
+      }
+    }
+  }
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacementNamed('/welcome-screen');
+      _init();
      });
+    
+    
   }
   @override
   Widget build(BuildContext context) {

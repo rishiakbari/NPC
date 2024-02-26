@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
+import 'package:npc/screens/forget_password_email_sent.dart';
+import 'package:npc/screens/sign_up_screen.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
 import 'package:npc/widgets/custom_text_form_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/colorz.dart';
 import '../widgets/custom_app_bar.dart';
@@ -18,10 +22,22 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  late SharedPreferences _sharedPreferences;
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   var isObsecure = true.obs;
   bool _checkbox = false;
+
+  Future<void> _init()async{
+    // WidgetsBinding.instance.addPostFrameCallback((_) async {});
+    _sharedPreferences = await SharedPreferences.getInstance();
+  }
+
+  @override
+  void initState() {
+    _init();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +147,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      Navigator.pushNamed(context, '/forget-password-email-sent-screen');
+                                      Navigator.pushNamed(context, ForgetPasswordEmailSentScreen.routeName);
                                     },
                                     child: Text(
                                       "Forget password ?",
@@ -150,14 +166,24 @@ class _SignInScreenState extends State<SignInScreen> {
                                 text: "Sign In",
                                 textColor: Colorz.simpleText,
                                 onPressed: () {
-                                  if(emailController.text.isEmpty || passwordController.text.isEmpty || !_checkbox){
+
+                                  if(emailController.text.isEmpty || passwordController.text.isEmpty){
                                     Fluttertoast.showToast(
                                       msg: "Please enter your required field",
-                                      gravity: ToastGravity.CENTER
                                       );
-                                  }else{
-                                    Navigator.pushNamed(context,  '/select-location-screen');
                                   }
+                                  else if(!_checkbox){
+                                    setState(() {
+                                      Fluttertoast.showToast(
+                                      msg: "Please check the remember ",
+                                      );
+                                    });
+                                  }
+                                  else{
+                                    Navigator.pushNamed(context,  BottomNavigationBarScreen.routeName);
+                                    _sharedPreferences.setString('authToken', 'true');
+                                  }
+
                                 },
                               ),
                             ],
@@ -184,7 +210,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/sign-up-screen');
+                              Navigator.pushNamed(context, SignUpScreen.routeName);
                             },
                             child: Text(
                               "Sign up !",

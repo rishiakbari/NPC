@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:npc/screens/login_with_phone_number_screen.dart';
+import 'package:npc/screens/select_location_screen.dart';
+import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_country_code_picker.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
@@ -148,18 +151,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       height: 20.0,
                     ),
                     RoundedButtonWidget(
-                      text: "Sign In",
+                      text: "Sign Up",
                       textColor: Colorz.simpleText,
                       onPressed: () {
-                        if(email.text.isEmpty || phone.text.isEmpty){
+                        if(email.text.isEmpty && phone.text.isEmpty){
                           setState(() {
                             Fluttertoast.showToast(
                               msg: "Please enter your required fields",
-                              gravity: ToastGravity.CENTER,
                             );
                           });
-                        }else{
-                          Navigator.pushNamed(context, '/login-with-phone-number-screen');
+                        }
+                        else{
+                          if(phone.text.isNotEmpty){
+                            Navigator.pushNamed(context, LoginWithPhoneNumberScreen.routeName);
+                          }
+                          else{
+                            Navigator.pushNamed(context, SelectLocationScreen.routeName);
+                          }
+                          
+                          _sharedPreferences.setString('authToken', 'true');
                         }
                       },
                     )
@@ -184,7 +194,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, '/sign-in-screen');
+                    // Navigator.pushNamed(context, '/sign-in-screen');
                   },
                   child: Text(
                     "Sign In",
