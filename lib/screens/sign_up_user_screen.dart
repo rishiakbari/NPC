@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -61,10 +62,12 @@ class _SignUpUserScreenState extends State<SignUpUserScreen> {
                       CustomTextFormField(
                         controller: phoneNumberController,
                         hintText: "Phone Number",
+                        keyboardType: TextInputType.phone,
                       ),
                       CustomTextFormField(
                         controller: emailController,
                         hintText: "Email",
+                        keyboardType: TextInputType.emailAddress,
                       ),
                       CustomTextFormField(
                         controller: passwordController,
@@ -101,7 +104,27 @@ class _SignUpUserScreenState extends State<SignUpUserScreen> {
                         text: "Sign up",
                         textColor: Colorz.simpleText,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/success-screen');
+                          if(
+                            fullNameController.text.isEmpty ||
+                            phoneNumberController.text.isEmpty ||
+                            emailController.text.isEmpty ||
+                            passwordController.text.isEmpty ||
+                            confirmPasswordController.text.isEmpty
+                            ){
+                              Fluttertoast.showToast(
+                                msg: "Please enter your required fields",
+                                gravity: ToastGravity.CENTER
+                              );
+                          }
+                          else if (!_checkbox){
+                            Fluttertoast.showToast(
+                              msg: "Please check the Privacy Policy",
+                              gravity: ToastGravity.CENTER
+                            );
+                          }
+                          else{
+                            Navigator.pushNamed(context, '/success-screen');
+                          }
                         },
                       ),
                       const SizedBox(height: 30.0,),

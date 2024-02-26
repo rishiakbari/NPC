@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_country_code_picker.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
@@ -19,8 +20,8 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
     late SharedPreferences _sharedPreferences;
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController phone = TextEditingController();
   late String _countryCode;
   bool isChecked = false;
 
@@ -36,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
   @override
   void dispose(){
-    phoneController.dispose();
+    phone.dispose();
     super.dispose();
   }
   @override
@@ -80,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       height: 20.0,
                     ),
                     CustomTextFormField(
-                      controller: emailController,
+                      controller: email,
                       hintText: "johndoe@mail.com",
                       prefixIcon: const Icon(
                         Icons.mail,
@@ -116,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       height: 10.0,
                     ),
                     CustomTextFormField(
-                      controller: phoneController,
+                      controller: phone,
                       hintText: "Phone Number",
                       suffixIcon: ShaderMask(
                         blendMode: BlendMode.srcIn,
@@ -150,7 +151,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       text: "Sign In",
                       textColor: Colorz.simpleText,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/login-with-phone-number-screen');
+                        if(email.text.isEmpty || phone.text.isEmpty){
+                          setState(() {
+                            Fluttertoast.showToast(
+                              msg: "Please enter your required fields",
+                              gravity: ToastGravity.CENTER,
+                            );
+                          });
+                        }else{
+                          Navigator.pushNamed(context, '/login-with-phone-number-screen');
+                        }
                       },
                     )
                   ],

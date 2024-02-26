@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -66,7 +67,15 @@ class _ForgetPasswordEmailSentScreenState extends State<ForgetPasswordEmailSentS
                         text: "Send",
                         textColor: Colorz.simpleText,
                         onPressed: () {
-                          Navigator.pushNamed(context,  '/forget-password-email-code-screen');
+                         if(emailController.text.isEmpty){
+                          Fluttertoast.showToast(
+                            msg: "Please enter your email",
+                            gravity: ToastGravity.CENTER
+                          );
+                         }
+                         else{
+                           Navigator.pushNamed(context,  '/forget-password-email-code-screen');
+                         }
                         },
                       )
                     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -149,7 +150,14 @@ class _SignInScreenState extends State<SignInScreen> {
                                 text: "Sign In",
                                 textColor: Colorz.simpleText,
                                 onPressed: () {
-                                  Navigator.pushNamed(context,  '/select-location-screen');
+                                  if(emailController.text.isEmpty || passwordController.text.isEmpty || !_checkbox){
+                                    Fluttertoast.showToast(
+                                      msg: "Please enter your required field",
+                                      gravity: ToastGravity.CENTER
+                                      );
+                                  }else{
+                                    Navigator.pushNamed(context,  '/select-location-screen');
+                                  }
                                 },
                               ),
                             ],

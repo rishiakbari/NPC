@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
 import 'package:pinput/pinput.dart';
@@ -29,6 +30,7 @@ class _ForgetPasswordEmailCodeScreenState extends State<ForgetPasswordEmailCodeS
       border: Border.all(color: Colors.transparent)
     )
   );
+  final TextEditingController pinput = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +101,17 @@ class _ForgetPasswordEmailCodeScreenState extends State<ForgetPasswordEmailCodeS
                           text: "Send",
                           textColor: Colorz.simpleText,
                           onPressed: () {
-                            Navigator.pushNamed(context, '/change-password-screen');
+                           if(pinput.text.isEmpty){
+                            setState(() {
+                              Fluttertoast.showToast(
+                                msg: "Please enter your code",
+                                gravity: ToastGravity.CENTER,
+                              );
+                            });
+                           }
+                           else{
+                             Navigator.pushNamed(context, '/change-password-screen');
+                           }
                           },
                         )
                       ],
