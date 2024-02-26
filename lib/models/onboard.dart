@@ -19,19 +19,19 @@ class OnboardModel{
 
 List<OnboardModel> screens = <OnboardModel>[
   OnboardModel(
-    img: "assets/images/welcom.jpg", 
+    img: "assets/images/24.jpg", 
     text: "Welcome to New\nPark Cleaning", 
     desc: "Reference site about Lorem\nIpsum, giving information origins\nas well as a random", 
     bg: Colorz.main,  
   ),
   OnboardModel(
-    img: "assets/images/easytrackorder.jpg", 
+    img: "assets/images/60.jpg", 
     text: "Easy Track Order", 
     desc: "Reference site about Lorem\nIpsum, giving information origins\nas well as a random", 
     bg: Colorz.main,
   ),
   OnboardModel(
-    img: "assets/images/doortodoor.jpg", 
+    img: "assets/images/61.jpg", 
     text: "Door to Door Cleaning", 
     desc: "Reference site about Lorem\nIpsum, giving information origins\nas well as a random", 
     bg: Colorz.main,
