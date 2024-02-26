@@ -21,7 +21,7 @@ class _WelcomeLoginScreenState extends State<WelcomeLoginScreen> {
           Expanded(
             flex: 2,
             child: Image.asset(
-              "assets/images/welcom2.jpg",
+              "assets/images/77.jpg",
               fit: BoxFit.cover,
             ),
           ),
@@ -40,7 +40,7 @@ class _WelcomeLoginScreenState extends State<WelcomeLoginScreen> {
                     textColor: Colorz.simpleText, 
                     isGradient: true,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/welcome-v2-login-screen');
+                      Navigator.pushNamed(context, '/sign-in-screen');
                     },
                   ),
                   const SizedBox(height: 30.0,),
@@ -50,33 +50,65 @@ class _WelcomeLoginScreenState extends State<WelcomeLoginScreen> {
                     backgroundColor: Colorz.transparentBackground,
                     // isGradient: true,
                     onPressed: () {
-                      
+                      Navigator.of(context).pushNamed('/login-with-phone-number-screen');
                     },
                   ),
-                  const SizedBox(height: 30.0,),
-                  RichText(
-                    overflow: TextOverflow.clip,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "Don't have an account ? ",
-                      style: Theme.of(context)
-                      .textTheme
-                      .titleMedium!
-                      .copyWith(
-                        color: Colorz.simpleText,),
-                        ),
-                        TextSpan(
-                          text: "Register",
-                          style: Theme.of(context)
-                      .textTheme
-                      .titleMedium!
-                      .copyWith(
-                        color: Colorz.simpleText,),
-                        )
-                      ],
+                  const SizedBox(height: 50.0,),
+                  Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account ?",
+                  style: Theme.of(context)
+                  .textTheme
+                  .titleSmall!.
+                  copyWith(
+                    color: Colorz.simpleText,
+                  ),
+                ),
+                const SizedBox(
+                  width: 5.0,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/sign-up-screen');
+                  },
+                  child: Text(
+                    "Register",
+                    style: Theme.of(context)
+                    .textTheme
+                    .titleSmall!
+                    .copyWith(
+                      color: Colorz.simpleText, 
+                      fontWeight: FontWeight.w600
                     ),
-                  )
+                  ),
+                )
+              ],
+            ),
+                  // RichText(
+                  //   overflow: TextOverflow.clip,
+                  //   text: TextSpan(
+                  //     children: [
+                  //       TextSpan(
+                  //         text: "Don't have an account ? ",
+                  //     style: Theme.of(context)
+                  //     .textTheme
+                  //     .titleMedium!
+                  //     .copyWith(
+                  //       color: Colorz.simpleText,),
+                  //       ),
+                  //       TextSpan(
+                  //         text: "Register",
+                  //         style: Theme.of(context)
+                  //     .textTheme
+                  //     .titleMedium!
+                  //     .copyWith(
+                  //       color: Colorz.simpleText,),
+                  //       )
+                  //     ],
+                  //   ),
+                  // )
                 ],
               ),
             )

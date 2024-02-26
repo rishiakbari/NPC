@@ -22,7 +22,7 @@ class _WelcomeV2LoginScreenState extends State<WelcomeV2LoginScreen> {
           Expanded(
             flex: 2,
             child: Image.asset(
-              "assets/images/login.jpg",
+              "assets/images/58.jpg",
               fit: BoxFit.cover,  
             ),
           ),
