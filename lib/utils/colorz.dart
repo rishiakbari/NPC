@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Colorz {
-
   static const splashPage = Color(0xFFFFA900);
 
   static const main = Color(0xFF1C6AFE);
@@ -27,6 +26,12 @@ class Colorz {
   static const circleBackgroundGradiantOne = Color(0xFFA7E05F);
   static const circleBackgroundGradiantTwo = Color(0xFF12AB97);
 
+  static const roundedButtonone = Color(0xFF23D2C3);
+  static const roundedButtonTwo = Color(0xFF01BCAD);
+
+  static const roundedEditButtonOne = Color(0xFFFFBF35);
+  static const roundedEditButtonTwo = Color(0xFFFFA900);
+
   static const buttonGradiantOne = Color(0xFF5EDEFF);
   static const buttonGradiantTwo = Color(0xFF58BFFC);
 
@@ -38,5 +43,4 @@ class Colorz {
 
   static const dry = Color(0xFF6C4DDA);
   static const iron = Color(0xFFFD8590);
-
 }
