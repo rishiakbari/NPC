@@ -22,6 +22,7 @@ ThemeData buildThemeData(BuildContext context) {
             fontWeight: FontWeight.w600,
           ),
     ),
+    // tabBarTheme: TabBarTheme(indicatorColor: Colorz.appBar),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colorz.screenBackground,
       selectedItemColor: Colorz.main,
@@ -73,4 +74,3 @@ ThemeData buildThemeData(BuildContext context) {
     textTheme: GoogleFonts.robotoTextTheme().copyWith(),
   );
 }
-
