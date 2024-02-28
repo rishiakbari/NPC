@@ -11,7 +11,7 @@ ThemeData buildThemeData(BuildContext context) {
     brightness: Brightness.light,
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      backgroundColor: Colorz.screenBackground,
+      backgroundColor: Colorz.appBar,
       elevation: 0.0,
       iconTheme: const IconThemeData(
         color: Colorz.textSelection,
