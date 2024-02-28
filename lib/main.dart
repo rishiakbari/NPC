@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/booking_screen.dart';
 import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
@@ -20,8 +21,7 @@ import 'utils/app_theme.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
-   const SystemUiOverlayStyle(statusBarColor: Colors.transparent)
-  );
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const MyApp());
 }
 
@@ -34,30 +34,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'New Parck Cleaning',
       debugShowCheckedModeBanner: false,
-      theme:buildThemeData(context),
+      theme: buildThemeData(context),
       home: const SplashScreen(),
       initialRoute: '/',
       routes: {
-        SplashScreen.routeName :(context) =>  const SplashScreen(),
-        WelcomeScreen.routeName :(context) =>  const WelcomeScreen(),
-        WelcomeLoginScreen.routeName :(context) =>  const WelcomeLoginScreen(),
-        WelcomeV2LoginScreen.routeName :(context) =>  const WelcomeV2LoginScreen(),
-        SignInScreen.routeName :(context) =>  const SignInScreen(),
-        SignUpScreen.routeName :(context) =>  const SignUpScreen(),
-        LoginWithPhoneNumberScreen.routeName :(context) =>  const LoginWithPhoneNumberScreen(),
-        SelectLocationScreen.routeName :(context) =>  const SelectLocationScreen(),
-        OtpScreen.routeName :(context) =>  const OtpScreen(),
-        ForgetPasswordEmailSentScreen.routeName :(context) =>  const ForgetPasswordEmailSentScreen(),
-        ForgetPasswordEmailCodeScreen.routeName :(context) =>  const ForgetPasswordEmailCodeScreen(),
-        ChangePasswordScreen.routeName :(context) =>  const ChangePasswordScreen(),        
-        SignUpUserScreen.routeName :(context) =>  const SignUpUserScreen(),      
-        SuccessScreen.routeName :(context) =>  const SuccessScreen(),      
-        BottomNavigationBarScreen.routeName :(context) =>  const BottomNavigationBarScreen(),      
-        HomeCleanScreen.routeName :(context) =>  const HomeCleanScreen(),      
-
-      }, 
+        SplashScreen.routeName: (context) => const SplashScreen(),
+        WelcomeScreen.routeName: (context) => const WelcomeScreen(),
+        WelcomeLoginScreen.routeName: (context) => const WelcomeLoginScreen(),
+        WelcomeV2LoginScreen.routeName: (context) =>
+            const WelcomeV2LoginScreen(),
+        SignInScreen.routeName: (context) => const SignInScreen(),
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+        LoginWithPhoneNumberScreen.routeName: (context) =>
+            const LoginWithPhoneNumberScreen(),
+        SelectLocationScreen.routeName: (context) =>
+            const SelectLocationScreen(),
+        OtpScreen.routeName: (context) => const OtpScreen(),
+        ForgetPasswordEmailSentScreen.routeName: (context) =>
+            const ForgetPasswordEmailSentScreen(),
+        ForgetPasswordEmailCodeScreen.routeName: (context) =>
+            const ForgetPasswordEmailCodeScreen(),
+        ChangePasswordScreen.routeName: (context) =>
+            const ChangePasswordScreen(),
+        SignUpUserScreen.routeName: (context) => const SignUpUserScreen(),
+        SuccessScreen.routeName: (context) => const SuccessScreen(),
+        BottomNavigationBarScreen.routeName: (context) =>
+            const BottomNavigationBarScreen(),
+        HomeCleanScreen.routeName: (context) => const HomeCleanScreen(),
+        BookingScreen.routeName: (context) => const BookingScreen(),
+      },
     );
   }
 }
-
-
