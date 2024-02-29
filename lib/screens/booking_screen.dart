@@ -1,5 +1,6 @@
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:npc/screens/order_review_screen.dart';
 // import 'package:intl/intl.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
@@ -228,7 +229,9 @@ class _BookingScreenState extends State<BookingScreen> {
               minWidth: MediaQuery.of(context).size.width * 0.9,
               text: "Confirm Booking",
               textColor: Colorz.simpleText,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(OrderReviewScreen.routeName);
+              },
             )
           ],
         ),

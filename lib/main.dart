@@ -5,6 +5,7 @@ import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
+import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/sign_up_screen.dart';
@@ -14,6 +15,7 @@ import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:npc/screens/welcome_v2_login_screen.dart';
 import 'screens/change_password_screen.dart';
+import 'screens/cleaner_screen.dart';
 import 'screens/forget_password_email_code.dart';
 import 'screens/select_location_screen.dart';
 import 'screens/sign_up_user_screen.dart';
@@ -62,6 +64,8 @@ class MyApp extends StatelessWidget {
             const BottomNavigationBarScreen(),
         HomeCleanScreen.routeName: (context) => const HomeCleanScreen(),
         BookingScreen.routeName: (context) => const BookingScreen(),
+        OrderReviewScreen.routeName: (context) => const OrderReviewScreen(),
+        CleanerScreen.routeName: (context) => const CleanerScreen(),
       },
     );
   }

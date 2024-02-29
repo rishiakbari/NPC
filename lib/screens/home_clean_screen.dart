@@ -279,9 +279,9 @@ class _HomeCleanScreenState extends State<HomeCleanScreen> {
                                               BorderRadius.circular(100)),
                                       child: InkWell(
                                         onTap: () {
-                                          setState(() {
-                                            _itemcount--;
-                                          });
+                                          if (_itemcount <= 0) return;
+                                          _itemcount--;
+                                          setState(() {});
                                         },
                                         child: const Icon(
                                           Icons.remove,
@@ -312,9 +312,8 @@ class _HomeCleanScreenState extends State<HomeCleanScreen> {
                                               BorderRadius.circular(100)),
                                       child: InkWell(
                                         onTap: () {
-                                          setState(() {
-                                            _itemcount++;
-                                          });
+                                          _itemcount++;
+                                          setState(() {});
                                         },
                                         child: const Icon(
                                           Icons.add,
