@@ -35,7 +35,7 @@ class CustomSmallButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30.0),
+        borderRadius: BorderRadius.circular(8.0),
         gradient: gradient ??
             (backgroundColor != null || !isGradient
                 ? null
@@ -51,14 +51,13 @@ class CustomSmallButton extends StatelessWidget {
       ),
       child: MaterialButton(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
         padding: padding ??
             const EdgeInsets.symmetric(
               vertical: 12.0,
               horizontal: 8.0,
             ),
-        height: 40.0,
+        height: 50.0,
         minWidth: fitted ? null : minWidth ?? 100,
         onPressed: onPressed,
         child: icon != null
