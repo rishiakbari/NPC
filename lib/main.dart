@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:npc/screens/booking_screen.dart';
 import 'package:npc/screens/bottom_navigation_screen.dart';
+import 'package:npc/screens/check_out_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
+import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
@@ -66,6 +68,8 @@ class MyApp extends StatelessWidget {
         BookingScreen.routeName: (context) => const BookingScreen(),
         OrderReviewScreen.routeName: (context) => const OrderReviewScreen(),
         CleanerScreen.routeName: (context) => const CleanerScreen(),
+        CheckOutScreen.routeName: (context) => const CheckOutScreen(),
+        MyActivityScreen.routeName: (context) => const MyActivityScreen(),
       },
     );
   }
