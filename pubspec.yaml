@@ -50,6 +50,7 @@ dependencies:
   date_picker_timeline: ^1.2.5
   intl: ^0.18.1
   google_maps_flutter: ^2.2.8
+  flutter_polyline_points: ^2.0.0
 
 dev_dependencies:
   flutter_test:
