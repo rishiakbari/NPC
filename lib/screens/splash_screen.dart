@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/home_clean_screen.dart';
-import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -16,12 +16,14 @@ class RoundedButtonWidget extends StatelessWidget {
     this.padding,
     this.icon,
     this.width,
+    this.height,
   });
 
   final Function()? onPressed;
   final String text;
   final double? minWidth;
   final double? width;
+  final double? height;
   final Color? textColor;
   final Color? backgroundColor;
   final Gradient? gradient;
@@ -51,16 +53,16 @@ class RoundedButtonWidget extends StatelessWidget {
       ),
       child: MaterialButton(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         padding: padding ??
             const EdgeInsets.symmetric(
               vertical: 12.0,
               horizontal: 8.0,
             ),
-        height: 40.0,
-        minWidth: fitted
-            ? null
-            : minWidth ?? MediaQuery.of(context).size.width * 0.8,
+        height: height ?? 40.0,
+        minWidth:
+            fitted ? null : minWidth ?? MediaQuery.of(context).size.width * 0.8,
         onPressed: onPressed,
         child: icon != null
             ? SizedBox(
@@ -78,7 +80,7 @@ class RoundedButtonWidget extends StatelessWidget {
                         style:
                             Theme.of(context).textTheme.titleMedium!.copyWith(
                                   color: textColor ?? Colors.black,
-                                  fontWeight: FontWeight.w600,
+                                  // fontWeight: FontWeight.w600,
                                   decoration: isUnderlineText
                                       ? TextDecoration.underline
                                       : null,
@@ -94,7 +96,7 @@ class RoundedButtonWidget extends StatelessWidget {
                   text,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: textColor ?? Colors.black,
-                        fontWeight: FontWeight.w600,
+                        // fontWeight: FontWeight.w600,
                         decoration:
                             isUnderlineText ? TextDecoration.underline : null,
                         decorationColor: textColor ?? Colors.black,

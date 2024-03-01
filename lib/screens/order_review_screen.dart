@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:npc/screens/cleaner_screen.dart';
+import 'package:npc/screens/check_out_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:tabler_icons/tabler_icons.dart';
@@ -372,7 +372,7 @@ class _OrderReviewScreenState extends State<OrderReviewScreen> {
                   text: "Booking Now",
                   textColor: Colorz.simpleText,
                   onPressed: () {
-                    Navigator.of(context).pushNamed(CleanerScreen.routeName);
+                    Navigator.of(context).pushNamed(CheckOutScreen.routeName);
                   },
                 )
               ],

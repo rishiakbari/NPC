@@ -8,7 +8,6 @@ import 'package:npc/screens/subtitle_screen.dart';
 import 'package:npc/screens/user_screen.dart';
 import 'package:tabler_icons/tabler_icons.dart';
 import '../utils/colorz.dart';
-import 'home_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});

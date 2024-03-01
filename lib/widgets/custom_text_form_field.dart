@@ -21,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.outLine = false,
     this.fillColor,
+    this.padding,
   });
 
   final String? hintText;
@@ -38,6 +39,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function()? onTap;
   final Function(String)? onChanged;
   final Color? fillColor;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +47,7 @@ class CustomTextFormField extends StatelessWidget {
       margin: const EdgeInsets.symmetric(
         vertical: 7.0,
       ),
+      // padding: padding ?? EdgeInsets.only(top: 8.0, bottom: 8.0),
       child: TextFormField(
         controller: controller,
         focusNode: focusNode,
@@ -54,14 +57,13 @@ class CustomTextFormField extends StatelessWidget {
         inputFormatters: inputFormatters,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Colorz.textSecondary,
-              fontSize: 14
-              ),
+          hintStyle: Theme.of(context)
+              .textTheme
+              .titleSmall!
+              .copyWith(color: Colorz.textSecondary, fontSize: 14),
           labelText: labelText,
           labelStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
                 color: Colorz.textSecondary,
-
               ),
           border: outLine
               ? Theme.of(context).inputDecorationTheme.border

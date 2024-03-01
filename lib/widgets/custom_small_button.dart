@@ -16,6 +16,7 @@ class CustomSmallButton extends StatelessWidget {
     this.padding,
     this.icon,
     this.width,
+    this.height,
   });
 
   final Function()? onPressed;
@@ -30,6 +31,7 @@ class CustomSmallButton extends StatelessWidget {
   final bool isUnderlineText;
   final EdgeInsetsGeometry? padding;
   final Widget? icon;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +59,7 @@ class CustomSmallButton extends StatelessWidget {
               vertical: 12.0,
               horizontal: 8.0,
             ),
-        height: 50.0,
+        height: height ?? 50.0,
         minWidth: fitted ? null : minWidth ?? 100,
         onPressed: onPressed,
         child: icon != null
