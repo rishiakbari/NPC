@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -21,7 +22,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
         title: "My Activity",
       ),
       body: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Column(
           children: [
             TabBar(
@@ -44,12 +45,17 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                   ),
                 ),
                 Tab(
-                  child: Text(
-                    "Canceled",
+                  child: FittedBox(
+                    child: Text(
+                      "Canceled",
+                    ),
                   ),
                 ),
                 Tab(
-                  child: Text("Completed"),
+                  child: FittedBox(child: Text("Completed")),
+                ),
+                Tab(
+                  child: Text("Empty"),
                 ),
               ],
             ),
@@ -59,6 +65,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                   activeView(context),
                   cancelledView(context),
                   completedView(context),
+                  emptyView(context),
                 ],
               ),
             )
@@ -998,5 +1005,41 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
         ),
       ),
     );
+  }
+
+  Widget emptyView(BuildContext context) {
+    return CustomSingleChildScrollView(
+        child: Center(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
+            child: SvgPicture.asset("assets/icons/empty.svg"),
+          ),
+          Text(
+            "No Activity",
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: Colorz.textSelection, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            "Create some order for you ?",
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                color: Colorz.textSecondary, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          RoundedButtonWidget(
+            text: "Send a Cloth",
+            minWidth: MediaQuery.of(context).size.width * 0.70,
+            textColor: Colorz.simpleText,
+            onPressed: () {},
+          )
+        ],
+      ),
+    ));
   }
 }
