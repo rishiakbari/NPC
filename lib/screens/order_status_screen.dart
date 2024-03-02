@@ -1,10 +1,11 @@
 import 'package:another_stepper/dto/stepper_data.dart';
 import 'package:another_stepper/widgets/another_stepper.dart';
 import 'package:flutter/material.dart';
+import 'package:npc/screens/promo_detail_screen.dart';
+import 'package:npc/screens/tracking_order_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
-import 'package:npc/widgets/custom_time_line.dart';
 import 'package:tabler_icons/tabler_icons.dart';
 import '../utils/colorz.dart';
 
@@ -26,9 +27,8 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
     StepperData(
         title: StepperText(
           "Order Placed",
-          textStyle: const TextStyle(
-            color: Colors.grey,
-          ),
+          textStyle:
+              const TextStyle(color: Colorz.main, fontWeight: FontWeight.w600),
         ),
         subtitle: StepperText("08-09-2020, 12:02pm"),
         iconWidget: Container(
@@ -36,6 +36,11 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
           decoration: const BoxDecoration(
               color: Colorz.main,
               borderRadius: BorderRadius.all(Radius.circular(30))),
+          child: const Icon(
+            Icons.check,
+            color: Colors.white,
+            size: 15.0,
+          ),
         )),
     StepperData(
         title: StepperText("Booking Approved"),
@@ -45,7 +50,11 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
           decoration: const BoxDecoration(
               color: Colorz.main,
               borderRadius: BorderRadius.all(Radius.circular(30))),
-          child: const Icon(Icons.check, color: Colors.white),
+          // child: const Icon(
+          //   Icons.check,
+          //   color: Colors.white,
+          //   size: 20.0,
+          // ),
         )),
     StepperData(
         title: StepperText("On the way"),
@@ -53,28 +62,34 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
         iconWidget: Container(
           // padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
-              color: Colorz.main,
+              color: Colorz.textSecondary,
               borderRadius: BorderRadius.all(Radius.circular(30))),
-          child: const Icon(Icons.check, color: Colors.white),
+          // child: const Icon(
+          //   Icons.check,
+          //   color: Colors.white,
+          //   size: 20.0,
+          // ),
         )),
     StepperData(
         title: StepperText("Cleaner on his way",
-            textStyle: const TextStyle(color: Colors.grey)),
+            textStyle: const TextStyle(
+                color: Colorz.textSelection, fontWeight: FontWeight.w600)),
         subtitle: StepperText("08-09-2020, 12:02pm"),
         iconWidget: Container(
           // padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
-              color: Colorz.main,
+              color: Colorz.textSecondary,
               borderRadius: BorderRadius.all(Radius.circular(30))),
         )),
     StepperData(
         title: StepperText("Delivered",
-            textStyle: const TextStyle(color: Colors.grey)),
+            textStyle: const TextStyle(
+                color: Colorz.textSelection, fontWeight: FontWeight.w600)),
         subtitle: StepperText("08-09-2020, 12:02pm"),
         iconWidget: Container(
           // padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
-              color: Colorz.main,
+              color: Colorz.textSecondary,
               borderRadius: BorderRadius.all(Radius.circular(30))),
         )),
   ];
@@ -85,7 +100,11 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
       appBar: CustomAppBar(
         title: "Bookoing Tracking",
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(TablerIcons.map))
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(TrackingOrderScreen.routeName);
+              },
+              icon: const Icon(TablerIcons.map))
         ],
       ),
       body: RefreshIndicator(
@@ -109,7 +128,7 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                         Text(
                           "Timeline",
                           style:
-                              Theme.of(context).textTheme.bodyLarge!.copyWith(
+                              Theme.of(context).textTheme.titleLarge!.copyWith(
                                     color: Colorz.textSelection,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -117,14 +136,13 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                         AnotherStepper(
                           stepperList: stepperData,
                           stepperDirection: Axis.vertical,
-                          iconWidth: 25,
-                          iconHeight: 25,
+                          iconWidth: 20,
+                          iconHeight: 20,
                           activeBarColor: Colorz.main,
                           inActiveBarColor: Colors.grey,
-                          inverted: false,
-                          verticalGap: 50,
+                          verticalGap: 40,
                           activeIndex: 1,
-                          barThickness: 3,
+                          barThickness: 2,
                         ),
                         //first
                         // CustomTimeLine(
@@ -245,6 +263,10 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                   minWidth: MediaQuery.of(context).size.width * 0.9,
                   text: "Cancle Order",
                   textColor: Colorz.appBar,
+                  onPressed: () {
+                    Navigator.of(context)
+                        .pushNamed(PromoDetailScreen.routeName);
+                  },
                 )
               ],
             ),

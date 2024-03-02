@@ -10,10 +10,12 @@ import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/order_status_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
+import 'package:npc/screens/promo_detail_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/sign_up_screen.dart';
 import 'package:npc/screens/splash_screen.dart';
 import 'package:npc/screens/success_screen.dart';
+import 'package:npc/screens/tracking_order_screen.dart';
 import 'package:npc/screens/welcome_login_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:npc/screens/welcome_v2_login_screen.dart';
@@ -72,6 +74,8 @@ class MyApp extends StatelessWidget {
         CheckOutScreen.routeName: (context) => const CheckOutScreen(),
         MyActivityScreen.routeName: (context) => const MyActivityScreen(),
         OrderStatusScreen.routeName: (context) => const OrderStatusScreen(),
+        PromoDetailScreen.routeName: (context) => const PromoDetailScreen(),
+        TrackingOrderScreen.routeName: (context) => const TrackingOrderScreen(),
       },
     );
   }
