@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:npc/screens/order_status_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -1036,7 +1037,9 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
             text: "Send a Cloth",
             minWidth: MediaQuery.of(context).size.width * 0.70,
             textColor: Colorz.simpleText,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(OrderStatusScreen.routeName);
+            },
           )
         ],
       ),

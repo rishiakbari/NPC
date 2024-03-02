@@ -8,6 +8,7 @@ import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
 import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/screens/order_review_screen.dart';
+import 'package:npc/screens/order_status_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/sign_up_screen.dart';
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
         CleanerScreen.routeName: (context) => const CleanerScreen(),
         CheckOutScreen.routeName: (context) => const CheckOutScreen(),
         MyActivityScreen.routeName: (context) => const MyActivityScreen(),
+        OrderStatusScreen.routeName: (context) => const OrderStatusScreen(),
       },
     );
   }

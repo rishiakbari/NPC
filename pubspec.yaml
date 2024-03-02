@@ -51,6 +51,8 @@ dependencies:
   intl: ^0.18.1
   google_maps_flutter: ^2.2.8
   flutter_polyline_points: ^2.0.0
+  timeline_tile: ^2.0.0
+  another_stepper: ^1.2.2
 
 dev_dependencies:
   flutter_test:
