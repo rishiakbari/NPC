@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_svg/svg.dart';
 import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/utils/colorz.dart';
 import 'package:npc/widgets/custom_app_bar.dart';

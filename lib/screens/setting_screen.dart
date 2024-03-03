@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:npc/screens/messanger_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
 import 'package:tabler_icons/tabler_icons.dart';
@@ -58,6 +59,9 @@ class _SettingScreenState extends State<SettingScreen> {
                       .copyWith(color: Colorz.textSecondary),
                 ),
                 trailing: const Icon(TablerIcons.chevron_right),
+                onTap: () {
+                  Navigator.of(context).pushNamed(MessangerScreen.routeName);
+                },
               ),
             ),
             const SizedBox(

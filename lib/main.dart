@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:npc/screens/audio_call_screen.dart';
 import 'package:npc/screens/booking_screen.dart';
 import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/check_out_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
+import 'package:npc/screens/messanger_screen.dart';
 import 'package:npc/screens/my_activity_screen.dart';
+import 'package:npc/screens/notification_screen.dart';
 import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/order_status_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
@@ -78,6 +81,9 @@ class MyApp extends StatelessWidget {
         PromoDetailScreen.routeName: (context) => const PromoDetailScreen(),
         TrackingOrderScreen.routeName: (context) => const TrackingOrderScreen(),
         SettingScreen.routeName: (context) => const SettingScreen(),
+        MessangerScreen.routeName: (context) => const MessangerScreen(),
+        AudioCallScreen.routeName: (context) => const AudioCallScreen(),
+        NotificationScreen.routeName: (context) => const NotificationScreen(),
       },
     );
   }
