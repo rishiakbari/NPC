@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
+import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/utils/colorz.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
@@ -38,13 +39,13 @@ class _TrackingOrderScreenState extends State<TrackingOrderScreen> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Stack(
-                  alignment: Alignment.centerRight,
+                  // alignment: Alignment.centerRight,
                   children: [
-                    Positioned(
-                        top: 0,
-                        right: 0,
-                        child:
-                            SvgPicture.asset("assets/images/ellipse_20.svg")),
+                    // Positioned(
+                    //     top: 0,
+                    //     right: 0,
+                    //     child:
+                    //         SvgPicture.asset("assets/images/ellipse_20.svg")),
                     // Positioned(
                     // top: 0,
                     // right: 0,
@@ -103,7 +104,10 @@ class _TrackingOrderScreenState extends State<TrackingOrderScreen> {
                       RoundedButtonWidget(
                         text: "Track Now",
                         textColor: Colorz.simpleText,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(SettingScreen.routeName);
+                        },
                       )
                     ],
                   ),
