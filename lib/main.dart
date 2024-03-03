@@ -11,6 +11,7 @@ import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/order_status_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
 import 'package:npc/screens/promo_detail_screen.dart';
+import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
 import 'package:npc/screens/sign_up_screen.dart';
 import 'package:npc/screens/splash_screen.dart';
@@ -76,6 +77,7 @@ class MyApp extends StatelessWidget {
         OrderStatusScreen.routeName: (context) => const OrderStatusScreen(),
         PromoDetailScreen.routeName: (context) => const PromoDetailScreen(),
         TrackingOrderScreen.routeName: (context) => const TrackingOrderScreen(),
+        SettingScreen.routeName: (context) => const SettingScreen(),
       },
     );
   }
