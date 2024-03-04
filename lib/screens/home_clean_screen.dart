@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:npc/screens/booking_screen.dart';
+import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import '../utils/colorz.dart';
 
@@ -51,16 +52,19 @@ class _HomeCleanScreenState extends State<HomeCleanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          leading: IconButton(
-            icon: const Icon(Icons.chevron_left),
-            iconSize: 30.0,
-            highlightColor: Colors.transparent,
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-          title: const Text(
-            "Home Clean",
-          )),
+      appBar: CustomAppBar(
+        title: "Home Clean",
+      ),
+      // appBar: AppBar(
+      //     leading: IconButton(
+      //       icon: const Icon(Icons.chevron_left),
+      //       iconSize: 30.0,
+      //       highlightColor: Colors.transparent,
+      //       onPressed: () => Navigator.of(context).pop(),
+      //     ),
+      //     title: const Text(
+      //       "Home Clean",
+      //     )),
       backgroundColor: Colorz.screenBackground,
       body: DefaultTabController(
         length: 3,

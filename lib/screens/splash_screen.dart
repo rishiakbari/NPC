@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:npc/screens/home_clean_screen.dart';
+import 'package:npc/screens/bottom_navigation_screen.dart';
+// import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/welcome_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,8 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
       }
     } else {
       if (mounted) {
-        // Navigator.pushReplacementNamed(context, BottomNavigationBarScreen.routeName);
-        Navigator.pushReplacementNamed(context, HomeCleanScreen.routeName);
+        Navigator.pushReplacementNamed(
+            context, BottomNavigationBarScreen.routeName);
+        // Navigator.pushReplacementNamed(context, HomeCleanScreen.routeName);
       }
     }
   }

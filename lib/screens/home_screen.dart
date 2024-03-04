@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../utils/colorz.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colorz.screenBackground,
+
       // body: CustomSingleChildScrollView(
       //   child: Container(
       //     color: Colorz.main,
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //                 padding: const EdgeInsets.only(
       //                 top: 40,
       //                 left: 15,
-      //                 right: 15,  
+      //                 right: 15,
       //                 ),
       //                 child: Row(
       //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //                   crossAxisCount: 2,
       //                   mainAxisExtent: 3,
       //                 ),
-      //                 scrollDirection: Axis.vertical, 
+      //                 scrollDirection: Axis.vertical,
       //                 itemBuilder: (context, index) {
       //                   return Container();
       //                 },

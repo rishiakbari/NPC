@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
@@ -19,6 +18,7 @@ class CheckOutScreen extends StatefulWidget {
 
 class _CheckOutScreenState extends State<CheckOutScreen> {
   final TextEditingController _controller = TextEditingController();
+  final TextEditingController couponController = TextEditingController();
   Future<void> refresh() async {
     await Future.delayed(const Duration(seconds: 2));
   }
@@ -278,7 +278,14 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                     color: Colorz.main,
                                     fontWeight: FontWeight.w600),
                           ),
-                          // CustomSmallButton(text: "")
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          Expanded(
+                            child: CustomTextFormField(
+                              controller: couponController,
+                            ),
+                          )
                         ],
                       ),
                       const SizedBox(
@@ -403,9 +410,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 minWidth: width * 0.9,
                 text: "Process to Checkout",
                 textColor: Colorz.simpleText,
-                onPressed: () {
-                  Navigator.of(context).pushNamed(MyActivityScreen.routeName);
-                },
+                onPressed: () {},
               )
             ],
           ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:npc/screens/order_status_screen.dart';
-import 'package:npc/widgets/custom_app_bar.dart';
+import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
 import 'package:npc/widgets/custom_single_child_scroll_view.dart';
+import 'package:tabler_icons/tabler_icons.dart';
 import '../utils/colorz.dart';
 
 class MyActivityScreen extends StatefulWidget {
@@ -19,9 +20,25 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
-        title: "My Activity",
-      ),
+      appBar: AppBar(
+          title: Text(
+            "My Activity",
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: Colorz.textSelection, fontWeight: FontWeight.w600),
+          ),
+          leading: InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(SettingScreen.routeName);
+            },
+            child: const Icon(
+              TablerIcons.align_left,
+              size: 30.0,
+              color: Colorz.textSelection,
+            ),
+          )),
+      // appBar: const CustomAppBar(
+      //   title: "My Activity",
+      // ),
       body: DefaultTabController(
         length: 4,
         child: Column(

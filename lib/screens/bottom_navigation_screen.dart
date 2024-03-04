@@ -1,11 +1,11 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:npc/screens/home_clean_screen.dart';
-import 'package:npc/screens/mail_screen.dart';
+import 'package:npc/screens/booking_screen.dart';
+import 'package:npc/screens/messanger_screen.dart';
+import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/screens/plus_screen.dart';
-import 'package:npc/screens/subtitle_screen.dart';
-import 'package:npc/screens/user_screen.dart';
+import 'package:npc/screens/profile_details.dart';
 import 'package:tabler_icons/tabler_icons.dart';
 import '../utils/colorz.dart';
 
@@ -55,13 +55,12 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
 }
 
 class NavigationController extends GetxController {
-  final RxInt currentIndex = 2.obs;
+  final RxInt currentIndex = 0.obs;
   final List<Widget> screens = [
-    const HomeCleanScreen(),
-    // const HomeScreen(),
-    const SubtitalScreen(),
     const PlusScreen(),
-    const MailScreen(),
-    const UserScreen(),
+    const MyActivityScreen(),
+    const BookingScreen(),
+    const MessangerScreen(),
+    const ProfileDetailScreen()
   ];
 }

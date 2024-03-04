@@ -4,6 +4,8 @@ import 'package:npc/screens/audio_call_screen.dart';
 import 'package:npc/screens/booking_screen.dart';
 import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/check_out_screen.dart';
+import 'package:npc/screens/coupon_screen.dart';
+import 'package:npc/screens/delivery_review_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
@@ -12,7 +14,9 @@ import 'package:npc/screens/my_activity_screen.dart';
 import 'package:npc/screens/notification_screen.dart';
 import 'package:npc/screens/order_review_screen.dart';
 import 'package:npc/screens/order_status_screen.dart';
+import 'package:npc/screens/order_success_screen.dart';
 import 'package:npc/screens/otp_screen.dart';
+import 'package:npc/screens/profile_details.dart';
 import 'package:npc/screens/promo_detail_screen.dart';
 import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/screens/sign_in_screen.dart';
@@ -84,6 +88,11 @@ class MyApp extends StatelessWidget {
         MessangerScreen.routeName: (context) => const MessangerScreen(),
         AudioCallScreen.routeName: (context) => const AudioCallScreen(),
         NotificationScreen.routeName: (context) => const NotificationScreen(),
+        ProfileDetailScreen.routeName: (context) => const ProfileDetailScreen(),
+        CouponScreen.routeName: (context) => const CouponScreen(),
+        DeliveryReviewScreen.routeName: (context) =>
+            const DeliveryReviewScreen(),
+        OrderSuccessScreen.routeName: (context) => const OrderSuccessScreen(),
       },
     );
   }
