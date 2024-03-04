@@ -53,6 +53,7 @@ dependencies:
   flutter_polyline_points: ^2.0.0
   timeline_tile: ^2.0.0
   another_stepper: ^1.2.2
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
