@@ -6,8 +6,10 @@ import 'package:npc/screens/bottom_navigation_screen.dart';
 import 'package:npc/screens/check_out_screen.dart';
 import 'package:npc/screens/coupon_screen.dart';
 import 'package:npc/screens/delivery_review_screen.dart';
+import 'package:npc/screens/faq_screen.dart';
 import 'package:npc/screens/forget_password_email_sent.dart';
 import 'package:npc/screens/home_clean_screen.dart';
+import 'package:npc/screens/how_it_work_screen.dart';
 import 'package:npc/screens/login_with_phone_number_screen.dart';
 import 'package:npc/screens/messanger_screen.dart';
 import 'package:npc/screens/my_activity_screen.dart';
@@ -93,6 +95,8 @@ class MyApp extends StatelessWidget {
         DeliveryReviewScreen.routeName: (context) =>
             const DeliveryReviewScreen(),
         OrderSuccessScreen.routeName: (context) => const OrderSuccessScreen(),
+        HowItWorkScreen.routeName: (context) => const HowItWorkScreen(),
+        FAQScreen.routeName: (context) => const FAQScreen(),
       },
     );
   }

@@ -31,7 +31,6 @@ class _SplashScreenState extends State<SplashScreen> {
       if (mounted) {
         Navigator.pushReplacementNamed(
             context, BottomNavigationBarScreen.routeName);
-        // Navigator.pushReplacementNamed(context, HomeCleanScreen.routeName);
       }
     }
   }

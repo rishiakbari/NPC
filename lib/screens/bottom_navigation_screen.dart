@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:npc/screens/booking_screen.dart';
 import 'package:npc/screens/messanger_screen.dart';
 import 'package:npc/screens/my_activity_screen.dart';
-import 'package:npc/screens/plus_screen.dart';
+import 'package:npc/screens/home_screen.dart';
 import 'package:npc/screens/profile_details.dart';
 import 'package:tabler_icons/tabler_icons.dart';
 import '../utils/colorz.dart';
@@ -57,7 +57,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
 class NavigationController extends GetxController {
   final RxInt currentIndex = 0.obs;
   final List<Widget> screens = [
-    const PlusScreen(),
+    const HomeScreen(),
     const MyActivityScreen(),
     const BookingScreen(),
     const MessangerScreen(),
