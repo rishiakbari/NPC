@@ -46,7 +46,7 @@ class CustomCircleIconButton extends StatelessWidget {
               MaterialStateProperty.all(backgroundColor ?? Colorz.main),
         ),
         child: CustomIcon(
-          icon,
+          icon: icon.toString(),
           color: iconColor ?? Colorz.textBlack,
         ),
       ),
