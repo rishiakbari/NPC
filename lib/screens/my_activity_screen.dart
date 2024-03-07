@@ -237,7 +237,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -382,7 +382,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -547,7 +547,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -692,7 +692,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -858,7 +858,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -1004,7 +1004,7 @@ class _MyActivityScreenState extends State<MyActivityScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "Amount: \$120.00",
+                            "Amount: £120.00",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!

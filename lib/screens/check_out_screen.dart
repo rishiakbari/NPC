@@ -175,7 +175,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "2 x \$50",
+                            "2 x £50",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -195,7 +195,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "2 x \$50",
+                            "2 x £50",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -215,7 +215,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "2 x \$50",
+                            "2 x £50",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -235,7 +235,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "2 x \$50",
+                            "2 x £50",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -255,7 +255,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "2 x \$50",
+                            "2 x £50",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -311,7 +311,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "\$2500",
+                            "£2500",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -337,7 +337,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "\$120",
+                            "£120",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -363,7 +363,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "\$120",
+                            "£120",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -389,7 +389,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           ),
                           const Spacer(),
                           Text(
-                            "\$2500",
+                            "£2500",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!

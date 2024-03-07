@@ -184,7 +184,7 @@ class _OrderReviewScreenState extends State<OrderReviewScreen> {
                                 child: Column(
                                   children: [
                                     Text(
-                                      "\$10",
+                                      "£10",
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyLarge!
@@ -235,7 +235,7 @@ class _OrderReviewScreenState extends State<OrderReviewScreen> {
                             fontWeight: FontWeight.w600),
                       ),
                       Text(
-                        "\$50",
+                        "£50",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             color: Colorz.splashPage,
                             fontWeight: FontWeight.w600),
