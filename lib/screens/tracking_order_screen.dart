@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:npc/screens/setting_screen.dart';
 import 'package:npc/utils/colorz.dart';
 import 'package:npc/widgets/custom_app_bar.dart';
 import 'package:npc/widgets/custom_rounded_button.dart';
@@ -104,8 +103,8 @@ class _TrackingOrderScreenState extends State<TrackingOrderScreen> {
                         text: "Track Now",
                         textColor: Colorz.simpleText,
                         onPressed: () {
-                          Navigator.of(context)
-                              .pushNamed(SettingScreen.routeName);
+                          // Navigator.of(context)
+                          //     .pushNamed(SettingScreen.routeName);
                         },
                       )
                     ],
